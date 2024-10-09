@@ -1,60 +1,76 @@
-selesaikan perhitungan ini 7 % 5 + 8 * 4 - 9 / 3 menggunakan function
-<?php 
+<!-- Soal Pertama Selesaikan Perhitungan Ini 5 + 3 * 7 / 4 - 9 % 8 menggunakan function -->
+<!-- Soal Kedua : -->
+Selesaikan Perhitungan Ini 7 % 5 + 8 * 4 - 9 / 3 menggunakan function
 
- echo "<br>";
-    $hasil = modulo(7,5);
-    $hasil = tambah($hasil,kali (8,4));
-    $hasil1 = bagi(9,3);
-    $hasil = kurang($hasil,$hasil1);
+<?php
 
-    // $hasil = tambah(5, kali (3,7)) ;
-    // $hasil = bagi($hasil,4);
-    // $hasil = kurang($hasil,9);
-    // $hasil = modulo($hasil,8);
-    echo $hasil;
+// 7 % 5 + 8 * 4 - 9 / 3
+echo "<br>";
+$x = modulo(7, 5);
+$x = tambah($x, kali(8, 4));
+$y = bagi(9, 3);
+$x = kurang($x, $y);
+echo $x;
 
-function kali($a, $b) {
-    echo "Belajar Perkalian =";
-    $c= $a * $b;
+// 5 + 3 * 7 / 4 - 9 % 8
+// perkalian, pembagian, modulus tidak didahulukan
+echo "<br>";
+$hasil = tambah(5, kali(3, 7));
+$hasil = bagi($hasil, 4);
+$hasil = kurang($hasil, 9);
+$hasil = modulo($hasil, 8);
+echo $hasil;
+
+
+
+function kali($a, $b)
+{
+    $c = $a * $b;
     return $c;
-    echo "<br>";
 }
-    echo "<br>";
-    echo kali (3,7)/4 +5 - 9 % 8;
-    echo "<br>";
+echo "<br/>";
+echo kali(5, 7) + 10;
+echo "<br/>";
 
-function tambah($a, $b) {
-        echo "Belajar Tambah =";
-        $c= $a + $b;
-        return $c;
-        echo "<br>";
-    }
 
-    tambah(120,80);
 
-function kurang($a, $b) {
-        echo "Belajar Kurang =";
-        $c= $a - $b;
-        return $c;
-        echo "<br>";
-    }
+function tambah($a, $b)
+{
+    $c = $a + $b;
+    return $c;
+}
+// perkalian, pembagian, dan modulus didahulukan
+echo tambah(5, (3 * 7) / 4) - 9 % 8;
+echo "<br/>";
 
-    kurang(20,10);
 
-function bagi($a, $b) {
-        echo "Belajar Bagi =";
-        $c= $a / $b;
-        return $c;
-        echo "<br>";
-    }
 
-    bagi(12,3);
+function kurang($a, $b)
+{
+    $c = $a - $b;
+    return $c;
+}
+kurang(15, 5);
+echo "<br/>";
 
-function modulo($a, $b) {
+
+
+function bagi($a, $b)
+{
+    $c = $a / $b;
+    return $c;
+}
+
+bagi(10, 2);
+echo "<br/>";
+
+
+
+function modulo($a, $b)
+{
     $c = $a % $b;
     return $c;
 }
-
-modulo(255,11);
+echo modulo(a: 11, b: 5);
 
 ?>
